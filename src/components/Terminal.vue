@@ -1,14 +1,5 @@
 <template>
-    <div class="container">
-      <el-row>
-        <el-col :span="18" :offset="3">
-          <TestCaseList />
-        </el-col>
-        
-      </el-row>  
-    </div>
-      <!-- <div id="xterm" class="xterm" ></div> -->
-   
+      <div id="xterm" class="xterm" ></div>
 </template>
 
 <script>
@@ -16,13 +7,9 @@
 import { Terminal } from 'xterm'; 
 import { FitAddon } from 'xterm-addon-fit'
 import { AttachAddon } from 'xterm-addon-attach'
-import TestCaseList from '@/components/TestCaseList'
 
 export default {
-  name: 'Home',
-  components: {
-    TestCaseList
-  },
+  name: 'Terminal',
 
   props: {
     socketURI: {
@@ -80,6 +67,3 @@ export default {
 
 }
 </script>
-<style lang="scss" scoped>
-
-</style>
